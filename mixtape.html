@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Mixtape</title>
+		<link rel="stylesheet" href="styles.css" type="text/css" />
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"
+			integrity="sha512-6+YN/9o9BWrk6wSfGxQGpt3EUK6XeHi6yeHV+TYD2GR0Sj/cggRpXr1BrAQf0as6XslxomMUxXp2vIl+fv0QRA=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"></script>
+	</head>
+
+	<body>
+		<div class="cassette">
+			<div class="rectangle">
+				<div class="inner-rectangle">
+					<div class="title">
+						<p>Pati's Mixtape</p>
+					</div>
+					<div class="title">
+						<h2>B</h2>
+					</div>
+					<div class="ribon-container">
+						<div class="box">
+							<div class="tape-wheel">
+								<div class="teethBox">
+									<div class="teeth"></div>
+									<div class="teeth"></div>
+									<div class="teeth"></div>
+									<div class="teeth"></div>
+								</div>
+							</div>
+							<div class="tape">
+								<div class="tape-ribbon"></div>
+								<div class="tape-ribbon-two"></div>
+							</div>
+							<div class="tape-wheel">
+								<div class="teethBox2">
+									<div class="teeth"></div>
+									<div class="teeth"></div>
+									<div class="teeth"></div>
+									<div class="teeth"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="cassette-body">
+					<div class="squares"></div>
+					<div class="squares two"></div>
+				</div>
+			</div>
+		</div>
+		<p id="currentTrackTitle">Now Playing:</p>
+		<div class="playOptions">
+			<button id="prevButton"><img id="backArrow" src="arrow-45.svg" alt="" /></button>
+			<button id="playButton"><img src="play.svg" alt="Play Button" /></button>
+			<button id="pauseButton"><img src="pause.svg" alt="Pause Button" /></button>
+			<button id="nextButton"><img src="arrow-45.svg" alt="Skip" /></button>
+		</div>
+	</body>
+	<script src="script.js"></script>
+</html>

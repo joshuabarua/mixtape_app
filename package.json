@@ -1,0 +1,15 @@
+{
+	"name": "mixtape",
+	"version": "1.0.0",
+	"description": "app for mixtape adding",
+	"main": "mixtape.html",
+	"type": "module",
+	"scripts": {
+		"test": "run test"
+	},
+	"author": "Joshua Barua-Fowle",
+	"license": "ISC",
+	"dependencies": {
+		"dotenv": "^16.3.1"
+	}
+}

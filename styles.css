@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Long+Cang&display=swap');
+body {
+	height: 95vh;
+	background: #59afa5;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-direction: column;
+	width: 100vw;
+}
+* {
+	box-sizing: border-box;
+}
+.cassette {
+	text-align: center;
+}
+
+.playOptions {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 50vw;
+	gap: 20;
+}
+
+p {
+	font-family: 'Long Cang', cursive;
+	font-size: 2rem;
+	font-weight: bold;
+	position: relative;
+}
+h2 {
+	position: relative;
+	left: -150px;
+	top: -45px;
+}
+.rectangle {
+	box-shadow: -20px 20px 5px #397c73;
+	width: 450px;
+	height: 280px;
+	background: #1a1a1a;
+	border-radius: 1rem;
+	display: flex;
+	justify-content: center;
+	z-index: -3;
+	flex-wrap: wrap;
+}
+.inner-rectangle {
+	position: relative;
+	top: 20px;
+	width: 350px;
+	height: 180px;
+	background: #cebaa1;
+	border-radius: 5px;
+	border-top-right-radius: 10%;
+	border-top-left-radius: 10%;
+}
+.inner-rectangle::before {
+	content: '';
+	position: absolute;
+	width: 105%;
+	height: 105%;
+	background: #000000;
+	z-index: -1;
+	left: -10px;
+	border-radius: 5px;
+	border-top-right-radius: 10%;
+	border-top-left-radius: 10%;
+}
+.title {
+	text-align: center;
+	border: 1px solid black;
+	width: 100%;
+	height: 30px;
+	border-right: 0;
+	border-left: 0;
+}
+#currentTrackTitle {
+	text-align: center;
+	border: 1px solid black;
+	width: 50%;
+	height: 40px;
+}
+.ribon-container {
+	position: relative;
+	top: 20px;
+	width: 100%;
+	height: 70px;
+	background: #a25b23;
+}
+.box {
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+	top: 2px;
+	left: 60px;
+	background: #272727;
+	width: 230px;
+	height: 93%;
+	border-radius: 30px;
+	border: 3px solid #cebaa1;
+}
+.cassette-body {
+	position: relative;
+	width: 285px;
+	border-bottom: 50px solid #000000;
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	height: 20px;
+	top: 25px;
+}
+.squares {
+	position: relative;
+	top: 15px;
+	height: 15px;
+	width: 15px;
+	border-radius: 5px;
+	border: 3px solid #696969;
+	background: #59afa5;
+}
+.two {
+	top: 0px;
+	left: 215px;
+}
+.tape-wheel {
+	position: relative;
+	width: 60px;
+	height: 98%;
+	border-radius: 50%;
+	background: #59afa5;
+	border: 5px solid #696b6b;
+}
+.tape {
+	position: relative;
+	top: 10px;
+	width: 60px;
+	height: 60%;
+	border-radius: 10%;
+	background: #59afa5;
+	display: flex;
+	justify-content: space-between;
+	overflow: hidden;
+}
+.teethBox,
+.teethBox2 {
+	position: relative;
+	border: 5px solid #272727;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	transform: rotate(0);
+}
+
+.teeth:nth-child(1) {
+	position: relative;
+	width: 10px;
+	height: 11px;
+	top: 5px;
+	background: #272727;
+	transform: rotate(-25.08deg);
+}
+.teeth:nth-child(1) {
+	position: relative;
+	left: 10px;
+	width: 10px;
+	height: 11px;
+	top: -0px;
+	background: #272727;
+	transform: rotate(-25.08deg);
+}
+.teeth:nth-child(2) {
+	position: relative;
+	left: 30px;
+	top: -5px;
+	width: 10px;
+	height: 11px;
+	background: #272727;
+	transform: rotate(61.63deg);
+}
+.teeth:nth-child(3) {
+	position: relative;
+	left: 20px;
+	width: 10px;
+	height: 11px;
+	top: 5px;
+	background: #272727;
+	transform: rotate(-25.08deg);
+}
+
+.teeth:nth-child(4) {
+	position: relative;
+	top: -15px;
+	width: 10px;
+	height: 11px;
+	background: #272727;
+	transform: rotate(61.63deg);
+}
+
+.tape-ribbon {
+	position: relative;
+	width: 40%;
+	height: 100%;
+	background: #623d18;
+	border-top-right-radius: 50%;
+	border-bottom-right-radius: 50%;
+	border: 1px solid black;
+	border-left: 0;
+	transform: translateX(-20px);
+}
+.tape-ribbon-two {
+	position: relative;
+	width: 40%;
+	height: 100%;
+	background: #623d18;
+	border-top-left-radius: 50%;
+	border-bottom-left-radius: 50%;
+	border: 1px solid black;
+	transform: translateX(20px);
+	border-right: 0;
+}
+
+#backArrow {
+	transform: rotate(180deg);
+}
+.playing {
+	animation: spin-teeth 1.3s linear infinite;
+}
+.play {
+	animation: slide 1.8s linear alternate infinite;
+}
+.play-two {
+	animation: slide2 1.8s linear alternate-reverse infinite;
+}
+@keyframes spin-teeth {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes slide {
+	from {
+		transform: translateX(-20px);
+	}
+	to {
+		transform: translateX(0px);
+	}
+}
+@keyframes slide2 {
+	from {
+		transform: translateX(20px);
+	}
+	to {
+		transform: translateX(0px);
+	}
+}
