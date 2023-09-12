@@ -20,7 +20,7 @@ body {
 	justify-content: center;
 	align-items: center;
 	width: 50vw;
-	gap: 20;
+	gap: 50px;
 }
 
 p {
@@ -231,6 +231,12 @@ h2 {
 .play-two {
 	animation: slide2 1.8s linear alternate-reverse infinite;
 }
+
+.plyr-div {
+	width: 100px;
+	height: 100px;
+}
+
 @keyframes spin-teeth {
 	from {
 		transform: rotate(0deg);

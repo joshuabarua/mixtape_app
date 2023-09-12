@@ -5,11 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Mixtape</title>
 		<link rel="stylesheet" href="styles.css" type="text/css" />
-		<script
-			src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"
-			integrity="sha512-6+YN/9o9BWrk6wSfGxQGpt3EUK6XeHi6yeHV+TYD2GR0Sj/cggRpXr1BrAQf0as6XslxomMUxXp2vIl+fv0QRA=="
-			crossorigin="anonymous"
-			referrerpolicy="no-referrer"></script>
+		<link rel="stylesheet" href="https://cdn.plyr.io/3.6.8/plyr.css" />
 	</head>
 
 	<body>
@@ -57,9 +53,13 @@
 		<div class="playOptions">
 			<button id="prevButton"><img id="backArrow" src="arrow-45.svg" alt="" /></button>
 			<button id="playButton"><img src="play.svg" alt="Play Button" /></button>
-			<button id="pauseButton"><img src="pause.svg" alt="Pause Button" /></button>
+			<button id="pauseButton" style="display: none"><img src="pause.svg" alt="Pause Button" /></button>
 			<button id="nextButton"><img src="arrow-45.svg" alt="Skip" /></button>
 		</div>
+		<div class="plyr-div">
+			<div id="plyr-player"></div>
+		</div>
+		<script src="https://cdn.plyr.io/3.6.8/plyr.js"></script>
 	</body>
 	<script src="script.js"></script>
 </html>
