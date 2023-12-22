@@ -1,9 +1,3 @@
-const player = new Plyr('#plyr-player', {
-	controls: ['play', 'progress', 'volume', 'settings'],
-});
-
-window.player = player;
-
 const playlist = {
 	video1: {src: 'https://www.youtube.com/watch?v=V_Ydoe4Q-Gg', name: 'Radiohead - Weird Fishes'},
 	video2: {src: 'https://www.youtube.com/watch?v=qU9mHegkTc4', name: 'Arctic Monkeys - 505'},

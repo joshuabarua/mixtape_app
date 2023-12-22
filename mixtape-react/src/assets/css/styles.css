@@ -7,6 +7,14 @@ body {
 	width: 100vw;
 }
 
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap-reverse;
+	margin-bottom: 30px;
+}
+
 .mainContent {
 	display: flex;
 	justify-content: space-around;
@@ -33,9 +41,8 @@ p {
 }
 h2 {
 	position: relative;
-	left: -150px;
-	top: -45px;
 }
+
 .rectangle {
 	box-shadow: -20px 20px 5px #397c73;
 	width: 450px;
@@ -57,18 +64,7 @@ h2 {
 	border-top-right-radius: 10%;
 	border-top-left-radius: 10%;
 }
-.inner-rectangle::before {
-	content: '';
-	position: absolute;
-	width: 105%;
-	height: 105%;
-	background: #000000;
-	z-index: -1;
-	left: -10px;
-	border-radius: 5px;
-	border-top-right-radius: 10%;
-	border-top-left-radius: 10%;
-}
+
 .title {
 	text-align: center;
 	border: 1px solid black;
@@ -77,11 +73,17 @@ h2 {
 	border-right: 0;
 	border-left: 0;
 }
-#currentTrackTitle {
-	text-align: center;
-	width: 50%;
-	height: 100px;
+.title h2 {
+	display: flex;
+	justify-content: flex-start;
+	top: -15px;
+	left: 10px;
 }
+
+.title p {
+	top: -35px;
+}
+
 .ribon-container {
 	position: relative;
 	display: flex;
@@ -227,6 +229,25 @@ h2 {
 	border-right: 0;
 }
 
+/** Info Control Area */
+
+.infoControlContainer {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
+	height: 250px;
+}
+
+.nowPlaying {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	line-height: 0px;
+}
+
 #backArrow {
 	transform: rotate(180deg);
 }
@@ -238,11 +259,6 @@ h2 {
 }
 .play-two {
 	animation: slide2 1.8s linear alternate-reverse infinite;
-}
-
-.plyr-div {
-	width: 100px;
-	height: 100px;
 }
 
 @keyframes spin-teeth {
