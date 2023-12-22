@@ -188,20 +188,20 @@ const App = () => {
 					</div>
 					<div className='playOptions'>
 						<button id='prevButton' onClick={prevTrack}>
-							<img id='backArrow' src='../src/assets/arrow-45.svg' alt='Previous' />
+							<img id='backArrow' src='./assets/arrow-45.svg' alt='Previous' />
 						</button>
 						{isPlaying ? (
 							<button id='playButton' onClick={handlePlay}>
-								<img src='../src/assets/pause.svg' alt='Pause Button' />
+								<img src='./assets/pause.svg' alt='Pause Button' />
 							</button>
 						) : (
 							<button id='pauseButton' onClick={handlePause}>
-								<img src='../src/assets/play.svg' alt='Play Button' />
+								<img src='./assets/play.svg' alt='Play Button' />
 							</button>
 						)}
 
 						<button id='nextButton' onClick={nextTrack}>
-							<img src='../src/assets/arrow-45.svg' alt='Skip' />
+							<img src='./assets/arrow-45.svg' alt='Skip' />
 						</button>
 					</div>
 
