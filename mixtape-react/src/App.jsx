@@ -138,6 +138,7 @@ const App = () => {
 	const handleDuration = (duration) => {
 		if (duration < 2) {
 			setCurrentIndex((prevIndex) => (prevIndex + 1) % playlistArr.length);
+			setIsPlaying(true);
 		}
 	};
 
