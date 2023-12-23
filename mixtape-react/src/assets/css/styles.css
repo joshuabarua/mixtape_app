@@ -266,8 +266,8 @@ h2 {
 	position: relative;
 	z-index: -1;
 	bottom: -90px;
-	animation: slideUp 10s ease-in-out infinite;
-	animation-delay: 10s;
+	animation: slideUp 15s ease-in-out infinite;
+	animation-delay: 15s;
 }
 
 @keyframes spin-teeth {
