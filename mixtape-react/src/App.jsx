@@ -199,7 +199,7 @@ const App = () => {
 					</div>
 					<div className='playOptions'>
 						<button id='prevButton' onClick={prevTrack}>
-							<img id='backArrow' src='/src/assets/arrow-45.svg' alt='Previous' />
+							<img id='backArrow' src='./assets/arrow-45.svg' alt='Previous' />
 						</button>
 						{isPlaying ? (
 							<button id='playButton' onClick={handlePlay}>
