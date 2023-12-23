@@ -261,6 +261,14 @@ h2 {
 	animation: slide2 1.8s linear alternate-reverse infinite;
 }
 
+.dog {
+	position: relative;
+	z-index: -1;
+	bottom: -90px;
+	animation: slideUp 10s ease-in-out infinite;
+	animation-delay: 40s;
+}
+
 @keyframes spin-teeth {
 	from {
 		transform: rotate(0deg);
@@ -284,5 +292,15 @@ h2 {
 	}
 	to {
 		transform: translateX(-5px);
+	}
+}
+
+@keyframes slideUp {
+	0%,
+	100% {
+		transform: translateY(0px);
+	}
+	50% {
+		transform: translateY(-80px);
 	}
 }

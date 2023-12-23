@@ -2,6 +2,7 @@ import {useState, useEffect} from 'react';
 import './assets/css/styles.css';
 import ReactPlayer from 'react-player';
 import TrackListing from './TrackListing';
+import {Player} from '@lottiefiles/react-lottie-player';
 
 // eslint-disable-next-line no-unused-vars
 const playlistUrl = 'https://www.youtube.com/playlist?list=PLqn9qPDmfV35JNrIyFX2D1NszFYY_2lgX';
@@ -137,7 +138,6 @@ const App = () => {
 
 	// Effect to handle when the current track changes
 	useEffect(() => {
-		console.log(`Now playing track index: ${playlistArr[currentIndex]}`);
 		setCurrentTrackTitle(songNames[currentIndex]);
 	}, [currentIndex]);
 
@@ -148,6 +148,9 @@ const App = () => {
 				<h1>FLUMEY AND THE SHRIMPS</h1>
 				<h2>Made by your shrimp </h2>
 				<div className='cassette'>
+					<div className='dog'>
+						<Player autoplay={true} play={isPlaying} loop src='../src/assets/dog-lottie.json' style={{height: '100px', width: '100px'}}></Player>
+					</div>
 					<div className='rectangle'>
 						<div className='inner-rectangle'>
 							<div className='title'>
