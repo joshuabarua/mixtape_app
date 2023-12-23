@@ -145,17 +145,17 @@ const App = () => {
 		<div className={'container'}>
 			<TrackListing songsArray={songNames} />
 			<div className='mainContent'>
-				<h1>Mix tape</h1>
-				<p>Made by your shrimp </p>
+				<h1>FLUMEY AND THE SHRIMPS</h1>
+				<h2>Made by your shrimp </h2>
 				<div className='cassette'>
 					<div className='rectangle'>
 						<div className='inner-rectangle'>
 							<div className='title'>
-								<h2>B</h2>
+								<h2>B SIDES</h2>
 							</div>
 
 							<div className='title'>
-								<p>4 Flumey</p>
+								<p>Mixtape S4 Flumey</p>
 							</div>
 
 							<div className='ribon-container'>
