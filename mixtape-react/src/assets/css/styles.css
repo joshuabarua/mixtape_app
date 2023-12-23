@@ -43,6 +43,11 @@ h2 {
 	position: relative;
 }
 
+img {
+	width: 56px;
+	height: 56px;
+}
+
 .rectangle {
 	box-shadow: -20px 20px 5px #397c73;
 	width: 85vw;
