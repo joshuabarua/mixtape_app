@@ -155,7 +155,7 @@ const App = () => {
 							</div>
 
 							<div className='title'>
-								<p>Mixtape S4 Flumey</p>
+								<p>Mixtape 4 Flumey</p>
 							</div>
 
 							<div className='ribon-container'>
