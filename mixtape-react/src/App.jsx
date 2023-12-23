@@ -68,7 +68,10 @@ const playlistArr = [
 	'https://www.youtube.com/watch?v=WvYR_gzFYjs',
 	'https://www.youtube.com/watch?v=yAG0uV_ZphQ',
 	'https://www.youtube.com/watch?v=R07kcK_1Hys',
+	'https://www.youtube.com/watch?v=gbfeG1Kl9kg',
 	'https://www.youtube.com/watch?v=mS8xDo-qM8w',
+	'https://www.youtube.com/watch?v=YT8rl2Sjhj8',
+	'https://www.youtube.com/watch?v=YCs-5eC0Rro',
 ];
 
 const songNames = [
@@ -100,7 +103,10 @@ const songNames = [
 	'The Moss - Celebrate',
 	'Peach Pit - Private Presley',
 	'Tangled Hair - Time Flies',
+	'Crowded House - Pineapple Head',
 	'City and Colour - The  Girl',
+	'The Kooks - Tick Of Time',
+	'The Kooks - Seaside',
 ];
 const App = () => {
 	const [isPlaying, setIsPlaying] = useState(false);
@@ -188,20 +194,20 @@ const App = () => {
 					</div>
 					<div className='playOptions'>
 						<button id='prevButton' onClick={prevTrack}>
-							<img id='backArrow' src='./assets/arrow-45.svg' alt='Previous' />
+							<img id='backArrow' src='./assets/css/arrow-45.svg' alt='Previous' />
 						</button>
 						{isPlaying ? (
 							<button id='playButton' onClick={handlePlay}>
-								<img src='./assets/pause.svg' alt='Pause Button' />
+								<img src='./assets/css/pause.svg' alt='Pause Button' />
 							</button>
 						) : (
 							<button id='pauseButton' onClick={handlePause}>
-								<img src='./assets/play.svg' alt='Play Button' />
+								<img src='./assets/css/play.svg' alt='Play Button' />
 							</button>
 						)}
 
 						<button id='nextButton' onClick={nextTrack}>
-							<img src='./assets/arrow-45.svg' alt='Skip' />
+							<img src='./assets/css/css/arrow-45.svg' alt='Skip' />
 						</button>
 					</div>
 
