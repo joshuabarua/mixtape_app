@@ -1,10 +1,12 @@
 const TrackListing = ({songsArray}) => {
 	return (
-		<div>
-			<h2>Track Listing</h2>
+		<div className='trackList'>
+			<h2>Track List</h2>
 			{songsArray.map((song, index) => (
 				<div key={index}>
-					{index + 1}. {song}
+					<h3>
+						{index + 1}. {song}
+					</h3>
 				</div>
 			))}
 		</div>

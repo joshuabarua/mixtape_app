@@ -14,6 +14,25 @@ body {
 	margin-bottom: 30px;
 }
 
+.trackList {
+	background-color: rgb(237, 241, 245);
+	width: 80vw;
+	padding: 20px;
+	border-radius: 3px;
+	box-shadow: -20px 20px 5px #397c73;
+}
+
+.trackList h2 {
+	border-bottom: rgb(210, 123, 123) 1px solid;
+	font-size: 32px;
+}
+
+.trackList h3 {
+	line-height: 15px;
+	border-bottom: rgb(211, 203, 203) 1px solid;
+	font-size: 22px;
+}
+
 .mainContent {
 	display: flex;
 	justify-content: space-around;
@@ -140,7 +159,7 @@ img {
 	height: 15px;
 	width: 15px;
 	border-radius: 5px;
-	border: 3px solid #696969;
+	border: 3px solid #c6c1c1;
 	background: #59afa5;
 }
 
@@ -149,7 +168,7 @@ img {
 	width: 70px;
 	height: 40px;
 	border-radius: 10%;
-	background: rgb(193, 190, 190);
+	background: rgb(237, 241, 245);
 	display: flex;
 	justify-content: space-between;
 	z-index: 0;
@@ -160,8 +179,8 @@ img {
 	width: 46px;
 	height: 46px;
 	border-radius: 50%;
-	background: rgb(193, 190, 190);
-	border: 4px solid rgb(193, 190, 190);
+	background: rgb(237, 241, 245);
+	border: 3px solid rgb(237, 241, 245);
 }
 .teethBox {
 	position: relative;
@@ -181,7 +200,7 @@ img {
 .block__cass {
 	width: 5px;
 	height: 5px;
-	background-color: #b8c2c6;
+	background-color: rgb(237, 241, 245);
 	position: relative;
 }
 
@@ -216,43 +235,6 @@ img {
 	left: 3px;
 	top: 7px;
 	transform: rotate(50deg);
-}
-
-.teeth:nth-child(1) {
-	position: relative;
-	width: 10px;
-	height: 11px;
-	top: 5px;
-	background: #272727;
-	transform: rotate(-25.08deg);
-}
-
-.teeth:nth-child(2) {
-	position: relative;
-	left: 30px;
-	top: -5px;
-	width: 10px;
-	height: 11px;
-	background: #272727;
-	transform: rotate(61.63deg);
-}
-.teeth:nth-child(3) {
-	position: relative;
-	left: 20px;
-	width: 10px;
-	height: 11px;
-	top: 5px;
-	background: #272727;
-	transform: rotate(-25.08deg);
-}
-
-.teeth:nth-child(4) {
-	position: relative;
-	top: -15px;
-	width: 10px;
-	height: 11px;
-	background: #272727;
-	transform: rotate(61.63deg);
 }
 
 .tape-ribbon {
@@ -295,6 +277,16 @@ img {
 	flex-direction: column;
 	align-items: center;
 	line-height: 0px;
+}
+
+.playOptions button {
+	background: none;
+	border: none;
+}
+
+.playOptions img:hover {
+	transform: scale(1.5);
+	transition: 0.3s ease-in-out;
 }
 
 .playing {
