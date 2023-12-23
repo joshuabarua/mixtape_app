@@ -149,7 +149,7 @@ const App = () => {
 				<h2>Made by your shrimp </h2>
 				<div className='cassette'>
 					<div className='dog'>
-						<Player autoplay={true} play={isPlaying} loop src='./assets/dog-lottie.json' style={{height: '100px', width: '100px'}}></Player>
+						<Player autoplay={true} play={isPlaying} loop src='assets/dog-lottie.json' style={{height: '100px', width: '100px'}}></Player>
 					</div>
 					<div className='rectangle'>
 						<div className='inner-rectangle'>
@@ -199,20 +199,20 @@ const App = () => {
 					</div>
 					<div className='playOptions'>
 						<button id='prevButton' onClick={prevTrack}>
-							<img id='backArrow' src='./assets/css/arrow-45.svg' alt='Previous' />
+							<img id='backArrow' src='./assets/arrow-45.svg' alt='Previous' />
 						</button>
 						{isPlaying ? (
 							<button id='playButton' onClick={handlePlay}>
-								<img src='./assets/css/pause.svg' alt='Pause Button' />
+								<img src='./assets/pause.svg' alt='Pause' />
 							</button>
 						) : (
 							<button id='pauseButton' onClick={handlePause}>
-								<img src='./assets/css/play.svg' alt='Play Button' />
+								<img src='assets/play.svg' alt='Play' />
 							</button>
 						)}
 
 						<button id='nextButton' onClick={nextTrack}>
-							<img src='./assets/css/css/arrow-45.svg' alt='Skip' />
+							<img src='/assets/arrow-45.svg' alt='Skip' />
 						</button>
 					</div>
 
