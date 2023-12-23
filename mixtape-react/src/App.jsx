@@ -128,7 +128,6 @@ const App = () => {
 		setCurrentIndex((prevIndex) => (prevIndex + 1) % playlistArr.length);
 	};
 
-	// Function to go to the previous track
 	const prevTrack = () => {
 		setCurrentIndex((prevIndex) => {
 			if (prevIndex === 0) return playlistArr.length - 1;
@@ -136,7 +135,12 @@ const App = () => {
 		});
 	};
 
-	// Effect to handle when the current track changes
+	const handleDuration = (duration) => {
+		if (duration < 2) {
+			setCurrentIndex((prevIndex) => (prevIndex + 1) % playlistArr.length);
+		}
+	};
+
 	useEffect(() => {
 		setCurrentTrackTitle(songNames[currentIndex]);
 	}, [currentIndex]);
@@ -229,7 +233,7 @@ const App = () => {
 					</div>
 
 					<div className=''>
-						<ReactPlayer url={playlistArr[currentIndex]} playing={isPlaying} width={'1px'} height={'1px'} />
+						<ReactPlayer url={playlistArr[currentIndex]} playing={isPlaying} width={'1px'} height={'1px'} onDuration={handleDuration} />
 					</div>
 				</div>
 			</div>
