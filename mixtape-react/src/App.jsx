@@ -135,6 +135,8 @@ const App = () => {
 		});
 	};
 
+	//TODO: Fix on duration function to skip to next song and play automatically then this is feature complete!
+
 	const handleDuration = (duration) => {
 		if (duration < 2) {
 			setCurrentIndex((prevIndex) => (prevIndex + 1) % playlistArr.length);
