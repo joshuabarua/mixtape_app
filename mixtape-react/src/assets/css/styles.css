@@ -47,6 +47,7 @@ h2 {
 	box-shadow: -20px 20px 5px #397c73;
 	width: 85vw;
 	max-width: 450px;
+	min-width: 380px;
 	height: 280px;
 	background: #1a1a1a;
 	border-radius: 1rem;
@@ -266,8 +267,8 @@ h2 {
 	position: relative;
 	z-index: -1;
 	bottom: -90px;
-	animation: slideUp 15s ease-in-out infinite;
-	animation-delay: 15s;
+	animation: slideUp 20s ease-in-out infinite;
+	animation-delay: 20s;
 }
 
 @keyframes spin-teeth {
