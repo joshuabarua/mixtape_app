@@ -149,91 +149,93 @@ const App = () => {
 	return (
 		<div className={'container'}>
 			<TrackListing songsArray={songNames} />
-			<div className='mainContent'>
-				<h1>FLUMEY AND THE SHRIMPS</h1>
-				<div className='cassette'>
-					<div className='dog'>
-						<Player autoplay={true} play={isPlaying} loop src='/dog-lottie.json' style={{height: '100px', width: '100px'}}></Player>
-					</div>
-					<div className='rectangle'>
-						<div className='inner-rectangle'>
-							<div className='title'>
-								<h2 id='h2Text'>B SIDES</h2>
-							</div>
+			<div className='cassetteContent'>
+				<div className='cassetteContainer'>
+					<h1>FLUMEY AND THE SHRIMPS</h1>
+					<div className='cassette'>
+						<div className='dog'>
+							<Player autoplay={true} play={isPlaying} loop src='/dog-lottie.json' style={{height: '100px', width: '100px'}}></Player>
+						</div>
+						<div className='rectangle'>
+							<div className='inner-rectangle'>
+								<div className='title'>
+									<h2 id='h2Text'>B SIDES</h2>
+								</div>
 
-							<div className='title'>
-								<p id='pTagTitle'>Mixtape 4 Flumey</p>
-							</div>
+								<div className='title'>
+									<p id='pTagTitle'>Mixtape 4 Flumey</p>
+								</div>
 
-							<div className='title'>
-								<h3 id='songTitle'>{currentTrackTitle}</h3>
-							</div>
+								<div className='title'>
+									<h3 id='songTitle'>{currentTrackTitle}</h3>
+								</div>
 
-							<div className='ribon-container'>
-								<div className='box'>
-									<div className='tape-wheel'>
-										<div className={`teethBox ${isPlaying ? 'playing' : ''}`}>
-											<div class='left circle'>
-												<div class='small__circle'>
-													<div class='block1 block__cass'></div>
-													<div class='block2 block__cass'></div>
-													<div class='block3 block__cass'></div>
-													<div class='block4 block__cass'></div>
-													<div class='block5 block__cass'></div>
-													<div class='block6 block__cass'></div>
+								<div className='ribon-container'>
+									<div className='box'>
+										<div className='tape-wheel'>
+											<div className={`teethBox ${isPlaying ? 'playing' : ''}`}>
+												<div class='left circle'>
+													<div class='small__circle'>
+														<div class='block1 block__cass'></div>
+														<div class='block2 block__cass'></div>
+														<div class='block3 block__cass'></div>
+														<div class='block4 block__cass'></div>
+														<div class='block5 block__cass'></div>
+														<div class='block6 block__cass'></div>
+													</div>
 												</div>
 											</div>
 										</div>
-									</div>
-									<div className='tape'>
-										<div className={`tape-ribbon ${isPlaying ? 'play' : ''}`}></div>
-										<div className={`tape-ribbon-two ${isPlaying ? 'play' : ''}`}></div>
-									</div>
-									<div className='tape-wheel'>
-										<div className={`teethBox ${isPlaying ? ' playing' : ''}`}>
-											<div class='right circle'>
-												<div class='small__circle'>
-													<div class='block1 block__cass'></div>
-													<div class='block2 block__cass'></div>
-													<div class='block3 block__cass'></div>
-													<div class='block4 block__cass'></div>
-													<div class='block5 block__cass'></div>
-													<div class='block6 block__cass'></div>
+										<div className='tape'>
+											<div className={`tape-ribbon ${isPlaying ? 'play' : ''}`}></div>
+											<div className={`tape-ribbon-two ${isPlaying ? 'play' : ''}`}></div>
+										</div>
+										<div className='tape-wheel'>
+											<div className={`teethBox ${isPlaying ? ' playing' : ''}`}>
+												<div class='right circle'>
+													<div class='small__circle'>
+														<div class='block1 block__cass'></div>
+														<div class='block2 block__cass'></div>
+														<div class='block3 block__cass'></div>
+														<div class='block4 block__cass'></div>
+														<div class='block5 block__cass'></div>
+														<div class='block6 block__cass'></div>
+													</div>
 												</div>
 											</div>
 										</div>
 									</div>
 								</div>
 							</div>
-						</div>
-						<div className='cassette-body'>
-							<div className='squares'></div>
-							<div className='squares two'></div>
+							<div className='cassette-body'>
+								<div className='squares'></div>
+								<div className='squares two'></div>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div className='infoControlContainer'>
-					<div className='playOptions'>
-						<button id='prevButton' onClick={prevTrack}>
-							<img id='backArrow' src='/previous.png' alt='Previous' />
-						</button>
-						{isPlaying ? (
-							<button id='playButton' onClick={handlePlay}>
-								<img src='/pause.png' alt='Pause' />
+					<div className='infoControlContainer'>
+						<div className='playOptions'>
+							<button id='prevButton' onClick={prevTrack}>
+								<img id='backArrow' src='/previous.png' alt='Previous' />
 							</button>
-						) : (
-							<button id='pauseButton' onClick={handlePause}>
-								<img src='/play.png' alt='Play' />
+							{isPlaying ? (
+								<button id='playButton' onClick={handlePlay}>
+									<img src='/pause.png' alt='Pause' />
+								</button>
+							) : (
+								<button id='pauseButton' onClick={handlePause}>
+									<img src='/play.png' alt='Play' />
+								</button>
+							)}
+
+							<button id='nextButton' onClick={nextTrack}>
+								<img src='/next.png' alt='Skip' />
 							</button>
-						)}
+						</div>
 
-						<button id='nextButton' onClick={nextTrack}>
-							<img src='/next.png' alt='Skip' />
-						</button>
-					</div>
-
-					<div className=''>
-						<ReactPlayer url={playlistArr[currentIndex]} playing={isPlaying} width={'1px'} height={'1px'} onDuration={handleDuration} />
+						<div className=''>
+							<ReactPlayer url={playlistArr[currentIndex]} playing={isPlaying} width={'1px'} height={'1px'} onDuration={handleDuration} />
+						</div>
 					</div>
 				</div>
 			</div>
