@@ -17,18 +17,31 @@ body {
 .trackList {
 	background-color: rgb(237, 241, 245);
 	width: 80vw;
+	max-width: 700px;
+	min-width: 300px;
 	padding: 20px;
 	border-radius: 3px;
 	box-shadow: -20px 20px 5px #397c73;
 }
 
-.trackList h2 {
+.trackListTitle {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 	border-bottom: rgb(210, 123, 123) 1px solid;
+	height: 40px;
+}
+
+.trackList h2 {
 	font-size: 32px;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
 }
 
 .trackList h3 {
 	line-height: 15px;
+	padding-bottom: 5px;
 	border-bottom: rgb(211, 203, 203) 1px solid;
 	font-size: 22px;
 }

@@ -150,7 +150,6 @@ const App = () => {
 			<TrackListing songsArray={songNames} />
 			<div className='mainContent'>
 				<h1>FLUMEY AND THE SHRIMPS</h1>
-				<h2>Made by your shrimp </h2>
 				<div className='cassette'>
 					<div className='dog'>
 						<Player autoplay={true} play={isPlaying} loop src='/dog-lottie.json' style={{height: '100px', width: '100px'}}></Player>
