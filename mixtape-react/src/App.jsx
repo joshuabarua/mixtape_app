@@ -149,7 +149,7 @@ const App = () => {
 				<h2>Made by your shrimp </h2>
 				<div className='cassette'>
 					<div className='dog'>
-						<Player autoplay={true} play={isPlaying} loop src='../src/assets/dog-lottie.json' style={{height: '100px', width: '100px'}}></Player>
+						<Player autoplay={true} play={isPlaying} loop src='./assets/dog-lottie.json' style={{height: '100px', width: '100px'}}></Player>
 					</div>
 					<div className='rectangle'>
 						<div className='inner-rectangle'>
