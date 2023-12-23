@@ -3,7 +3,6 @@ body {
 	height: 100vh;
 	font-family: 'Long Cang', cursive;
 	background: #59afa5;
-
 	width: 100vw;
 }
 
@@ -44,8 +43,8 @@ h2 {
 }
 
 img {
-	width: 56px;
-	height: 56px;
+	width: 36px;
+	height: 36px;
 }
 
 .rectangle {
@@ -255,9 +254,6 @@ img {
 	line-height: 0px;
 }
 
-#backArrow {
-	transform: rotate(180deg);
-}
 .playing {
 	animation: spin-teeth 1.3s linear infinite;
 }
