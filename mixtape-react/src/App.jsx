@@ -154,21 +154,31 @@ const App = () => {
 					<div className='rectangle'>
 						<div className='inner-rectangle'>
 							<div className='title'>
-								<h2>B SIDES</h2>
+								<h2 id='h2Text'>B SIDES</h2>
 							</div>
 
 							<div className='title'>
-								<p>Mixtape 4 Flumey</p>
+								<p id='pTagTitle'>Mixtape 4 Flumey</p>
+							</div>
+
+							<div className='title'>
+								<h3 id='songTitle'>{currentTrackTitle}</h3>
 							</div>
 
 							<div className='ribon-container'>
 								<div className='box'>
 									<div className='tape-wheel'>
 										<div className={`teethBox ${isPlaying ? 'playing' : ''}`}>
-											<div className='teeth'></div>
-											<div className='teeth'></div>
-											<div className='teeth'></div>
-											<div className='teeth'></div>
+											<div class='left circle'>
+												<div class='small__circle'>
+													<div class='block1 block__cass'></div>
+													<div class='block2 block__cass'></div>
+													<div class='block3 block__cass'></div>
+													<div class='block4 block__cass'></div>
+													<div class='block5 block__cass'></div>
+													<div class='block6 block__cass'></div>
+												</div>
+											</div>
 										</div>
 									</div>
 									<div className='tape'>
@@ -177,10 +187,16 @@ const App = () => {
 									</div>
 									<div className='tape-wheel'>
 										<div className={`teethBox ${isPlaying ? ' playing' : ''}`}>
-											<div className='teeth'></div>
-											<div className='teeth'></div>
-											<div className='teeth'></div>
-											<div className='teeth'></div>
+											<div class='right circle'>
+												<div class='small__circle'>
+													<div class='block1 block__cass'></div>
+													<div class='block2 block__cass'></div>
+													<div class='block3 block__cass'></div>
+													<div class='block4 block__cass'></div>
+													<div class='block5 block__cass'></div>
+													<div class='block6 block__cass'></div>
+												</div>
+											</div>
 										</div>
 									</div>
 								</div>
@@ -193,10 +209,6 @@ const App = () => {
 					</div>
 				</div>
 				<div className='infoControlContainer'>
-					<div className='nowPlaying'>
-						<h2 id=''>Track:</h2>
-						<h2 id=''> {currentTrackTitle}</h2>
-					</div>
 					<div className='playOptions'>
 						<button id='prevButton' onClick={prevTrack}>
 							<img id='backArrow' src='/previous.png' alt='Previous' />
