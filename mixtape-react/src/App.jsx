@@ -115,6 +115,8 @@ const App = () => {
 	const [isPlaying, setIsPlaying] = useState(false);
 	const [currentTrackTitle, setCurrentTrackTitle] = useState();
 	const [currentIndex, setCurrentIndex] = useState(0);
+	const [duration, setDuration] = useState();
+	const [currentTime, setCurrentTime] = useState(0);
 
 	const handlePlay = () => {
 		setIsPlaying(false);
@@ -135,18 +137,14 @@ const App = () => {
 		});
 	};
 
-	//TODO: Fix on duration function to skip to next song and play automatically then this is feature complete!
-
-	const handleDuration = (duration) => {
-		if (duration < 2) {
-			setCurrentIndex((prevIndex) => (prevIndex + 1) % playlistArr.length);
-			setIsPlaying(true);
-		}
-	};
-
 	useEffect(() => {
+		console.log(currentTime && currentTime.playedSeconds.toFixed(0));
+		if (currentTime && currentTime.playedSeconds.toFixed(0) == duration - 2) {
+			setCurrentIndex((prevIndex) => (prevIndex + 1) % playlistArr.length);
+		}
 		setCurrentTrackTitle(songNames[currentIndex]);
-	}, [currentIndex]);
+		console.log(currentIndex);
+	}, [currentIndex, currentTime]);
 
 	return (
 		<div className={'container'}>
@@ -176,14 +174,14 @@ const App = () => {
 									<div className='box'>
 										<div className='tape-wheel'>
 											<div className={`teethBox ${isPlaying ? 'playing' : ''}`}>
-												<div class='left circle'>
-													<div class='small__circle'>
-														<div class='block1 block__cass'></div>
-														<div class='block2 block__cass'></div>
-														<div class='block3 block__cass'></div>
-														<div class='block4 block__cass'></div>
-														<div class='block5 block__cass'></div>
-														<div class='block6 block__cass'></div>
+												<div className='left circle'>
+													<div className='small__circle'>
+														<div className='block1 block__cass'></div>
+														<div className='block2 block__cass'></div>
+														<div className='block3 block__cass'></div>
+														<div className='block4 block__cass'></div>
+														<div className='block5 block__cass'></div>
+														<div className='block6 block__cass'></div>
 													</div>
 												</div>
 											</div>
@@ -194,14 +192,14 @@ const App = () => {
 										</div>
 										<div className='tape-wheel'>
 											<div className={`teethBox ${isPlaying ? ' playing' : ''}`}>
-												<div class='right circle'>
-													<div class='small__circle'>
-														<div class='block1 block__cass'></div>
-														<div class='block2 block__cass'></div>
-														<div class='block3 block__cass'></div>
-														<div class='block4 block__cass'></div>
-														<div class='block5 block__cass'></div>
-														<div class='block6 block__cass'></div>
+												<div className='right circle'>
+													<div className='small__circle'>
+														<div className='block1 block__cass'></div>
+														<div className='block2 block__cass'></div>
+														<div className='block3 block__cass'></div>
+														<div className='block4 block__cass'></div>
+														<div className='block5 block__cass'></div>
+														<div className='block6 block__cass'></div>
 													</div>
 												</div>
 											</div>
@@ -235,8 +233,15 @@ const App = () => {
 							</button>
 						</div>
 
-						<div className=''>
-							<ReactPlayer url={playlistArr[currentIndex]} playing={isPlaying} width={'1px'} height={'1px'} onDuration={handleDuration} />
+						<div>
+							<ReactPlayer
+								url={playlistArr[currentIndex]}
+								playing={isPlaying}
+								width={'1px'}
+								height={'1px'}
+								onDuration={(songDuration) => setDuration(songDuration)}
+								onProgress={(elapsedTime) => setCurrentTime(elapsedTime)}
+							/>
 						</div>
 					</div>
 				</div>
