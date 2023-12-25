@@ -115,8 +115,8 @@ const App = () => {
 	const [isPlaying, setIsPlaying] = useState(false);
 	const [currentTrackTitle, setCurrentTrackTitle] = useState();
 	const [currentIndex, setCurrentIndex] = useState(0);
-	const [duration, setDuration] = useState();
-	const [currentTime, setCurrentTime] = useState(0);
+	const [duration, setDuration] = useState(0);
+	const [currentTime, setCurrentTime] = useState();
 
 	const handlePlay = () => {
 		setIsPlaying(false);
@@ -137,13 +137,18 @@ const App = () => {
 		});
 	};
 
+	const formatTime = (seconds) => {
+		const pad = (num) => (num < 10 ? `0${num}` : num);
+		const minutes = Math.floor(seconds / 60);
+		const secondsLeft = Math.floor(seconds % 60);
+		return `${pad(minutes)}:${pad(secondsLeft)}`;
+	};
+
 	useEffect(() => {
-		console.log(currentTime && currentTime.playedSeconds.toFixed(0));
-		if (currentTime && currentTime.playedSeconds.toFixed(0) == duration - 2) {
+		if (currentTime && currentTime.playedSeconds.toFixed(0) == duration - 1) {
 			setCurrentIndex((prevIndex) => (prevIndex + 1) % playlistArr.length);
 		}
 		setCurrentTrackTitle(songNames[currentIndex]);
-		console.log(currentIndex);
 	}, [currentIndex, currentTime]);
 
 	return (
@@ -214,6 +219,9 @@ const App = () => {
 						</div>
 					</div>
 					<div className='infoControlContainer'>
+						<p>
+							{formatTime(currentTime && currentTime.playedSeconds.toFixed(0))} / {formatTime(duration)}
+						</p>
 						<div className='playOptions'>
 							<button id='prevButton' onClick={prevTrack}>
 								<img id='backArrow' src='/previous.png' alt='Previous' />
