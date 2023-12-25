@@ -91,13 +91,13 @@ const songNames = [
 	'Night Cap - Glimpse',
 	'Delta Sleep - El Pastor',
 	'Holy Fuck - Endless',
-	'M83 - Solitude (Felsmann + Tiley Reinterpretation',
+	'M83 - Solitude (Felsmann + Tiley Reinterpretation)',
 	'Toro Y Moi - Rose Quarts',
 	'Hers - Cool With You',
 	'Mac Demarco - Dreaming',
 	'Wolf Alice - Feeling Myself',
 	'HAIM - Falling',
-	'Zero 7 & Sophie Barker -Destiny (feat. Sia)',
+	'Zero 7 & Sophie Barker - Destiny (feat. Sia)',
 	'Mazzy Star - Fade Into You',
 	'Masego + FKJ - Tadow',
 	'Kaiser Chiefs - Ruby',
@@ -146,10 +146,13 @@ const App = () => {
 
 	useEffect(() => {
 		if (currentTime && currentTime.playedSeconds.toFixed(0) == duration - 1) {
-			setCurrentIndex((prevIndex) => (prevIndex + 1) % playlistArr.length);
+			if (currentIndex == playlistArr.length - 1) {
+				setCurrentIndex(0);
+			}
+			setCurrentIndex(currentIndex + 1);
 		}
 		setCurrentTrackTitle(songNames[currentIndex]);
-	}, [currentIndex, currentTime]);
+	}, [currentTime, duration, playlistArr]);
 
 	return (
 		<div className={'container'}>
@@ -171,7 +174,7 @@ const App = () => {
 									<p id='pTagTitle'>Mixtape 4 Flumey</p>
 								</div>
 
-								<div className='title'>
+								<div className='title3'>
 									<h3 id='songTitle'>{currentTrackTitle}</h3>
 								</div>
 
@@ -192,8 +195,10 @@ const App = () => {
 											</div>
 										</div>
 										<div className='tape'>
+											<div className='overlayTape'></div>
 											<div className={`tape-ribbon ${isPlaying ? 'play' : ''}`}></div>
 											<div className={`tape-ribbon-two ${isPlaying ? 'play' : ''}`}></div>
+											<div className='overlayTape2'></div>
 										</div>
 										<div className='tape-wheel'>
 											<div className={`teethBox ${isPlaying ? ' playing' : ''}`}>
@@ -219,9 +224,9 @@ const App = () => {
 						</div>
 					</div>
 					<div className='infoControlContainer'>
-						<p>
+						<h2>
 							{formatTime(currentTime && currentTime.playedSeconds.toFixed(0))} / {formatTime(duration)}
-						</p>
+						</h2>
 						<div className='playOptions'>
 							<button id='prevButton' onClick={prevTrack}>
 								<img id='backArrow' src='/previous.png' alt='Previous' />
@@ -247,6 +252,7 @@ const App = () => {
 								playing={isPlaying}
 								width={'1px'}
 								height={'1px'}
+								controls={true}
 								onDuration={(songDuration) => setDuration(songDuration)}
 								onProgress={(elapsedTime) => setCurrentTime(elapsedTime)}
 							/>
