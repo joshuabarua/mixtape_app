@@ -156,8 +156,8 @@ const App = () => {
 		setCurrentTrackTitle(songNames[currentIndex]);
 	}, [currentTime, duration, playlistArr]);
 
-	const spoolClass1 = isPlaying ? 'spool spool1 spool-playing' : 'spool spool1 spool-paused';
-	const spoolClass2 = isPlaying ? ' spool spool2 spool-playing' : 'spool spool2 spool-paused';
+	const spoolClass1 = isPlaying ? 'spool spool1 animation-playing' : 'spool spool1 animation-paused';
+	const spoolClass2 = isPlaying ? ' spool spool2 animation-playing' : 'spool spool2 animation-paused';
 	const teethSpin = isPlaying ? 'playing animation-playing' : ' animation-paused';
 
 	return (

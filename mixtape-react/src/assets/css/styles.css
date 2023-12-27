@@ -17,6 +17,12 @@ body {
 	height: 100%;
 }
 
+.cassetteContainer h1 {
+	text-decoration: underline;
+	text-decoration-color: #0f0909;
+	text-decoration-thickness: 3px;
+}
+
 .trackList {
 	background-color: rgb(249, 246, 233);
 	width: 80vw;
