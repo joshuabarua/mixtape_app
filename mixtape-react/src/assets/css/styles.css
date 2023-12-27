@@ -261,11 +261,11 @@ img {
 	animation: spooling 60s linear infinite alternate;
 }
 
-.spool-playing {
+.animation-playing {
 	animation-play-state: running;
 }
 
-.spool-paused {
+.animation-paused {
 	animation-play-state: paused;
 }
 
@@ -394,13 +394,7 @@ img {
 }
 
 .playing {
-	animation: spin-teeth 1.3s linear infinite;
-}
-.play {
-	animation: slide 1.8s linear alternate infinite;
-}
-.play-two {
-	animation: slide2 1.8s linear alternate-reverse infinite;
+	animation: spin-teeth 2s linear infinite;
 }
 
 .dog {

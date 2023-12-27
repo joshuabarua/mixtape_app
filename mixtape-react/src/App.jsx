@@ -158,6 +158,7 @@ const App = () => {
 
 	const spoolClass1 = isPlaying ? 'spool spool1 spool-playing' : 'spool spool1 spool-paused';
 	const spoolClass2 = isPlaying ? ' spool spool2 spool-playing' : 'spool spool2 spool-paused';
+	const teethSpin = isPlaying ? 'playing animation-playing' : ' animation-paused';
 
 	return (
 		<div className={'container'}>
@@ -186,7 +187,7 @@ const App = () => {
 								<div className='ribon-container'>
 									<div className='box'>
 										<div className='tape-wheel'>
-											<div className={`teethBox ${isPlaying ? 'playing' : ''}`}>
+											<div className={`teethBox ${teethSpin}`}>
 												<div className='left circle'>
 													<div className='small__circle'>
 														<div className='block1 block__cass'></div>
@@ -206,7 +207,7 @@ const App = () => {
 											</div>
 										</div>
 										<div className='tape-wheel'>
-											<div className={`teethBox ${isPlaying ? ' playing' : ''}`}>
+											<div className={`teethBox ${teethSpin}`}>
 												<div className='right circle'>
 													<div className='small__circle'>
 														<div className='block1 block__cass'></div>
