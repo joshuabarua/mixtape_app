@@ -249,7 +249,7 @@ img {
 	background: rgb(249, 246, 233);
 	border: 1px solid rgb(249, 246, 233);
 	border-radius: 50%;
-	box-shadow: 0 0 0 1px rgba(207, 201, 174, 0.9), 0 0 0 1px rgb(249, 246, 233);
+	box-shadow: 0 0 0 1px rgba(207, 201, 174, 0.9), 0 0 0 1px rgba(207, 201, 174, 0.9);
 }
 
 .spool:after {
@@ -278,10 +278,10 @@ img {
 
 @keyframes spooling {
 	from {
-		box-shadow: 0 0 0 0.5em rgba(146, 145, 141, 50), 0 0 0 calc(0.5em + 3px) rgb(249, 246, 233);
+		box-shadow: 0 0 0 0.5em rgba(146, 145, 141, 50), 0 0 0 calc(0.5em + 3px) rgba(168, 164, 146, 0.9);
 	}
 	to {
-		box-shadow: 0 0 0 2em rgba(146, 145, 141, 100), 0 0 0 calc(2em + 3px) rgb(249, 246, 233);
+		box-shadow: 0 0 0 2em rgba(146, 145, 141, 100), 0 0 0 calc(2em + 3px) rgba(168, 164, 146, 0.9);
 	}
 }
 
