@@ -111,6 +111,8 @@ const songNames = [
 	'The Kooks - Tick Of Time',
 	'The Kooks - Seaside',
 ];
+
+const cssSpool = {};
 const App = () => {
 	const [isPlaying, setIsPlaying] = useState(false);
 	const [currentTrackTitle, setCurrentTrackTitle] = useState();
@@ -154,6 +156,9 @@ const App = () => {
 		setCurrentTrackTitle(songNames[currentIndex]);
 	}, [currentTime, duration, playlistArr]);
 
+	const spoolClass1 = isPlaying ? 'spool spool1 spool-playing' : 'spool spool1 spool-paused';
+	const spoolClass2 = isPlaying ? ' spool spool2 spool-playing' : 'spool spool2 spool-paused';
+
 	return (
 		<div className={'container'}>
 			<TrackListing songsArray={songNames} />
@@ -195,10 +200,10 @@ const App = () => {
 											</div>
 										</div>
 										<div className='tape'>
-											<div className='overlayTape'></div>
-											<div className={`tape-ribbon ${isPlaying ? 'play' : ''}`}></div>
-											<div className={`tape-ribbon-two ${isPlaying ? 'play' : ''}`}></div>
-											<div className='overlayTape2'></div>
+											<div className='window'>
+												<div className={spoolClass1}></div>
+												<div className={spoolClass2}></div>
+											</div>
 										</div>
 										<div className='tape-wheel'>
 											<div className={`teethBox ${isPlaying ? ' playing' : ''}`}>
