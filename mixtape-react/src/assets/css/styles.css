@@ -412,6 +412,10 @@ img {
 	animation-delay: 20s;
 }
 
+#reactPlayer {
+	display: none;
+	visibility: hidden;
+}
 @keyframes spin-teeth {
 	from {
 		transform: rotate(0deg);

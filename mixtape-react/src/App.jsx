@@ -252,7 +252,7 @@ const App = () => {
 							</button>
 						</div>
 
-						<div>
+						<div id='reactPlayer'>
 							<ReactPlayer
 								url={playlistArr[currentIndex]}
 								playing={isPlaying}
