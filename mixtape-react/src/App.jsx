@@ -82,7 +82,7 @@ const playlistArr = [
 const songNames = [
 	'Snow Patrol - You Could Be Happy',
 	'The Kooks - Watching The Ships Roll In',
-	'City and Color - What Makes A Man',
+	"City and Color - What Makes A Man",
 	'Arctic Monkeys - 505',
 	'Radiohead - Weird Fishes',
 	'Queens of the Stone Age - Go With The Flow',
