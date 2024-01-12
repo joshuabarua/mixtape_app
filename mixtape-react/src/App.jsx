@@ -42,6 +42,8 @@ const playlistOne = {
 
 const playlistArr = [
 	'https://www.youtube.com/watch?v=76Mbnuwk2d4',
+	'https://www.youtube.com/watch?v=W9BoAcbQdc4',
+	'https://www.youtube.com/watch?v=Iugr-yPgQgQ',
 	'https://www.youtube.com/watch?v=qU9mHegkTc4',
 	'https://www.youtube.com/watch?v=V_Ydoe4Q-Gg',
 	'https://www.youtube.com/watch?v=Iw1Fm61HBA8',
@@ -79,6 +81,8 @@ const playlistArr = [
 
 const songNames = [
 	'Snow Patrol - You Could Be Happy',
+	'The Kooks - Watching The Ships Roll In',
+	'City and Color - What Makes A Man',
 	'Arctic Monkeys - 505',
 	'Radiohead - Weird Fishes',
 	'Queens of the Stone Age - Go With The Flow',
