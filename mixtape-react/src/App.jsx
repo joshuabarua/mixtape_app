@@ -41,6 +41,7 @@ const playlistOne = {
 };
 
 const playlistArr = [
+	'https://www.youtube.com/watch?v=76Mbnuwk2d4',
 	'https://www.youtube.com/watch?v=qU9mHegkTc4',
 	'https://www.youtube.com/watch?v=V_Ydoe4Q-Gg',
 	'https://www.youtube.com/watch?v=Iw1Fm61HBA8',
@@ -77,6 +78,7 @@ const playlistArr = [
 ];
 
 const songNames = [
+	'Snow Patrol - You Could Be Happy',
 	'Arctic Monkeys - 505',
 	'Radiohead - Weird Fishes',
 	'Queens of the Stone Age - Go With The Flow',
@@ -163,59 +165,59 @@ const App = () => {
 	return (
 		<div className={'container'}>
 			<TrackListing songsArray={songNames} />
-			<div className='cassetteContent'>
-				<div className='cassetteContainer'>
+			<div className="cassetteContent">
+				<div className="cassetteContainer">
 					<h1>FLUMEY AND THE SHRIMPS</h1>
-					<div className='cassette'>
-						<div className='dog'>
-							<Player autoplay={true} play={isPlaying} loop src='/dog-lottie.json' style={{height: '100px', width: '100px'}}></Player>
+					<div className="cassette">
+						<div className="dog">
+							<Player autoplay={true} play={isPlaying} loop src="/dog-lottie.json" style={{height: '100px', width: '100px'}}></Player>
 						</div>
-						<div className='rectangle'>
-							<div className='inner-rectangle'>
-								<div className='title'>
-									<h2 id='h2Text'>B SIDES</h2>
+						<div className="rectangle">
+							<div className="inner-rectangle">
+								<div className="title">
+									<h2 id="h2Text">B SIDES</h2>
 								</div>
 
-								<div className='title'>
-									<p id='pTagTitle'>Mixtape 4 Flumey</p>
+								<div className="title">
+									<p id="pTagTitle">Mixtape 4 Flumey</p>
 								</div>
 
-								<div className='title3'>
-									<h3 id='songTitle'>{currentTrackTitle}</h3>
+								<div className="title3">
+									<h3 id="songTitle">{currentTrackTitle}</h3>
 								</div>
 
-								<div className='ribon-container'>
-									<div className='box'>
-										<div className='tape-wheel'>
+								<div className="ribon-container">
+									<div className="box">
+										<div className="tape-wheel">
 											<div className={`teethBox ${teethSpin}`}>
-												<div className='left circle'>
-													<div className='small__circle'>
-														<div className='block1 block__cass'></div>
-														<div className='block2 block__cass'></div>
-														<div className='block3 block__cass'></div>
-														<div className='block4 block__cass'></div>
-														<div className='block5 block__cass'></div>
-														<div className='block6 block__cass'></div>
+												<div className="left circle">
+													<div className="small__circle">
+														<div className="block1 block__cass"></div>
+														<div className="block2 block__cass"></div>
+														<div className="block3 block__cass"></div>
+														<div className="block4 block__cass"></div>
+														<div className="block5 block__cass"></div>
+														<div className="block6 block__cass"></div>
 													</div>
 												</div>
 											</div>
 										</div>
-										<div className='tape'>
-											<div className='window'>
+										<div className="tape">
+											<div className="window">
 												<div className={spoolClass1}></div>
 												<div className={spoolClass2}></div>
 											</div>
 										</div>
-										<div className='tape-wheel'>
+										<div className="tape-wheel">
 											<div className={`teethBox ${teethSpin}`}>
-												<div className='right circle'>
-													<div className='small__circle'>
-														<div className='block1 block__cass'></div>
-														<div className='block2 block__cass'></div>
-														<div className='block3 block__cass'></div>
-														<div className='block4 block__cass'></div>
-														<div className='block5 block__cass'></div>
-														<div className='block6 block__cass'></div>
+												<div className="right circle">
+													<div className="small__circle">
+														<div className="block1 block__cass"></div>
+														<div className="block2 block__cass"></div>
+														<div className="block3 block__cass"></div>
+														<div className="block4 block__cass"></div>
+														<div className="block5 block__cass"></div>
+														<div className="block6 block__cass"></div>
 													</div>
 												</div>
 											</div>
@@ -223,36 +225,36 @@ const App = () => {
 									</div>
 								</div>
 							</div>
-							<div className='cassette-body'>
-								<div className='squares'></div>
-								<div className='squares two'></div>
+							<div className="cassette-body">
+								<div className="squares"></div>
+								<div className="squares two"></div>
 							</div>
 						</div>
 					</div>
-					<div className='infoControlContainer'>
+					<div className="infoControlContainer">
 						<h2>
 							{formatTime(currentTime && currentTime.playedSeconds.toFixed(0))} / {formatTime(duration)}
 						</h2>
-						<div className='playOptions'>
-							<button id='prevButton' onClick={prevTrack}>
-								<img id='backArrow' src='/previous.png' alt='Previous' />
+						<div className="playOptions">
+							<button id="prevButton" onClick={prevTrack}>
+								<img id="backArrow" src="/previous.png" alt="Previous" />
 							</button>
 							{isPlaying ? (
-								<button id='playButton' onClick={handlePlay}>
-									<img src='/pause.png' alt='Pause' />
+								<button id="playButton" onClick={handlePlay}>
+									<img src="/pause.png" alt="Pause" />
 								</button>
 							) : (
-								<button id='pauseButton' onClick={handlePause}>
-									<img src='/play.png' alt='Play' />
+								<button id="pauseButton" onClick={handlePause}>
+									<img src="/play.png" alt="Play" />
 								</button>
 							)}
 
-							<button id='nextButton' onClick={nextTrack}>
-								<img src='/next.png' alt='Skip' />
+							<button id="nextButton" onClick={nextTrack}>
+								<img src="/next.png" alt="Skip" />
 							</button>
 						</div>
 
-						<div id='reactPlayer'>
+						<div id="reactPlayer">
 							<ReactPlayer
 								url={playlistArr[currentIndex]}
 								playing={isPlaying}
