@@ -49,7 +49,7 @@ const playlistArr = [
 	'https://www.youtube.com/watch?v=HRhh0TGgldw',
 	'https://www.youtube.com/watch?v=k0Z6IxOeuMk',
 	'https://www.youtube.com/watch?v=76Mbnuwk2d4',
-	'https://www.youtube.com/watch?v=W9BoAcbQdc4',
+	'https://www.youtube.com/watch?v=fum7ZNJMem4',
 	'https://www.youtube.com/watch?v=Iugr-yPgQgQ',
 	'https://www.youtube.com/watch?v=qU9mHegkTc4',
 	'https://www.youtube.com/watch?v=gUs2ym9ORKo',
@@ -91,7 +91,7 @@ const playlistArr = [
 const songNames = [
 	'Nick Mulvey - Fever to the Form',
 	"Her's - What Once Was",
-	'Psychedelic Porn Crumpets - Slinky/ Holy Water',
+	'Psychedelic Porn Crumpets - Slinky/Holy Water',
 	'The Boxer Rebellion - Flashing Red Light Means Go',
 	'Athlete - Wires',
 	'Ben Howard - Evergreen',
