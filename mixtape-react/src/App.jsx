@@ -41,10 +41,18 @@ const playlistOne = {
 };
 
 const playlistArr = [
+	'https://www.youtube.com/watch?v=wz8OgFZiwtM',
+	'https://www.youtube.com/watch?v=5mKX21of0sM',
+	'https://www.youtube.com/watch?v=m35HImvKZZs',
+	'https://www.youtube.com/watch?v=RIR4bYKUqIc',
+	'https://www.youtube.com/watch?v=Lju7UKZZNFw',
+	'https://www.youtube.com/watch?v=HRhh0TGgldw',
+	'https://www.youtube.com/watch?v=k0Z6IxOeuMk',
 	'https://www.youtube.com/watch?v=76Mbnuwk2d4',
 	'https://www.youtube.com/watch?v=W9BoAcbQdc4',
 	'https://www.youtube.com/watch?v=Iugr-yPgQgQ',
 	'https://www.youtube.com/watch?v=qU9mHegkTc4',
+	'https://www.youtube.com/watch?v=gUs2ym9ORKo',
 	'https://www.youtube.com/watch?v=V_Ydoe4Q-Gg',
 	'https://www.youtube.com/watch?v=Iw1Fm61HBA8',
 	'https://www.youtube.com/watch?v=99IPnF9LGHo',
@@ -77,13 +85,22 @@ const playlistArr = [
 	'https://www.youtube.com/watch?v=mS8xDo-qM8w',
 	'https://www.youtube.com/watch?v=YT8rl2Sjhj8',
 	'https://www.youtube.com/watch?v=YCs-5eC0Rro',
+	'https://www.youtube.com/watch?v=Pg-cJQP5n8A',
 ];
 
 const songNames = [
+	'Nick Mulvey - Fever to the Form',
+	"Her's - What Once Was",
+	'Psychedelic Porn Crumpets - Slinky/ Holy Water',
+	'The Boxer Rebellion - Flashing Red Light Means Go',
+	'Athlete - Wires',
+	'Ben Howard - Evergreen',
+	'1975 - I Always Wanna Die Sometimes',
 	'Snow Patrol - You Could Be Happy',
 	'The Kooks - Watching The Ships Roll In',
-	"City and Color - What Makes A Man",
+	'City and Color - What Makes A Man',
 	'Arctic Monkeys - 505',
+	'Powderfinger - Sunsets',
 	'Radiohead - Weird Fishes',
 	'Queens of the Stone Age - Go With The Flow',
 	'Current Joys - Breaking the Waves',
@@ -116,6 +133,7 @@ const songNames = [
 	'City and Colour - The  Girl',
 	'The Kooks - Tick Of Time',
 	'The Kooks - Seaside',
+	'Mr Jukes - Grant Green ft. Charles Bradley',
 ];
 
 const cssSpool = {};
